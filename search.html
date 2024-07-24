@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOTELAMER</title>
+    <link rel="stylesheet" href="search.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+      <div class="container">
+        <!-- <h1>HOTELAMER</h1> -->
+        <div class="logo"><img src="Frame 60.png" alt="" />HOTELAMER</div>
+        <div class="nav-r">
+          <ul class="nav-link">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">About us</a></li>
+          </ul>
+          <div class="auth-links">
+            <a href="#" class="login-btn">login</a>
+            <a href="#" class="sign-up-btn">sign up</a>
+          </div>
+        </div>  
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="search-section">
+        <div class="filters">
+          <div class="location">
+            <label for="location">Locations</label>
+            <input type="text" id="location" />
+          </div>
+          <div class="checkin">
+            <label for="checkin">Check-in</label>
+            <input type="date" id="checkin" />
+          </div>
+          <div class="checkout">
+            <label for="checkout">Check-out</label>
+            <input type="date" id="checkout" />
+          </div>
+          <div class="person">
+            <label for="person">Person</label>
+            <input type="number" id="person" />
+          </div>
+        </div>
+        <div class="search-bar">
+          <div class="search">
+            <label for="search">Find specific hotel</label>
+            <input type="search" id="search" placeholder="Example" />
+          </div>
+        </div>
+      </div>
+      <section class="hotels">
+        <!-- <h2 class="h2">Hotel in London, United Kingdom</h2> -->
+        <p class="bx2">We found 1970 Hotels</p>
+        <div class="hotel-list">
+          <div class="hotel-item">
+            <a href="detail.html"><img src="6.png" alt="Maldives heaven Resort"/></a>
+            <h3>Maldives heaven Resort</h3>
+            <p>Maldives, Republic of Maldives</p>
+            <p>⭐⭐⭐⭐⭐ (7.2k Visitors)</p>
+          </div>
+          <div class="hotel-item">
+            <a href="detail.html"><img src="5.png" alt="Hawaii heaven Resort"/></a>
+            <h3>Hawaii heaven Resort</h3>
+            <p>Hawaii, United States of America</p>
+            <p>⭐⭐⭐⭐⭐ (7.2k Visitors)</p>
+          </div>
+          <div class="hotel-item">
+            <a href="detail.html"><img src="4.png" alt="Shirakawa-go Hotel"/></a>
+            <h3>Shirakawa-go Hotel</h3>
+            <p>Gifu, Japan</p>
+            <p>⭐⭐⭐⭐⭐ (7.2k Visitors)</p>
+          </div>
+          <div class="hotel-item">
+            <a href="detail.html"><img src="4.png" alt="Maldives heaven Resort"/></a>
+            <h3>Maldives heaven Resort</h3>
+            <p>Maldives, Republic of Maldives</p>
+            <p>⭐⭐⭐⭐⭐ (7.2k Visitors)</p>
+          </div>
+          <div class="hotel-item">
+            <a href="detail.html"><img src="5.png" alt="Hawaii heaven Resort" /></a>
+            <h3>Hawaii heaven Resort</h3>
+            <p>Hawaii, United States of America</p>
+            <p>⭐⭐⭐⭐⭐ (7.2k Visitors)</p>
+          </div>
+          <div class="hotel-item">
+            <a href="detail.html"><img src="6.png" alt="Shirakawa-go Hotel" /></a>
+            <h3>Shirakawa-go Hotel</h3>
+            <p>Gifu, Japan</p>
+            <p>⭐⭐⭐⭐⭐ (7.2k Visitors)</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to get query parameters
+        function getQueryParams() {
+          var params = {};
+          var queryString = window.location.search.substring(1);
+          var regex = /([^&=]+)=([^&]*)/g;
+          var match;
+          while ((match = regex.exec(queryString))) {
+            params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+          }
+          return params;
+        }
+
+        // Get the query parameters
+        var params = getQueryParams();
+
+        // Set the values of the input elements
+        for (var key in params) {
+          console.log(key);
+          if (params.hasOwnProperty(key)) {
+            var inputElement = document.getElementById(key);
+            if (inputElement) {
+              inputElement.value = params[key];
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

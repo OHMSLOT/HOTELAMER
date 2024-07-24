@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    margin: 15px 150px;
+}
+
+header {
+    background-color: transparent;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #000000;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    gap: 15px;
+}
+
+.nav-r {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link{
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    margin-right: 10px;
+}
+
+.auth-links a {
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.login-btn {
+    color: #000000;
+    border: #000000 solid 2px;
+    border-radius: 10px;
+    padding: 9px 20px;
+}
+
+.sign-up-btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+main {
+    margin: 20px 150px;
+}
+
+p{
+    margin-top: 20px;
+}
+
+.bx2 {
+    margin-bottom: 20px;
+}
+
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.filters,
+.search-bar {
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(141, 141, 141); */
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkin {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters label,
+.search-bar label {
+    margin-right: 10px;
+    /* background-color: aqua; */
+}
+
+.filters input,
+.search-bar input,
+.filters select {
+    margin-top: 20px;
+    margin-right: 60px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.hotel-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.hotel-item {
+    border-radius: 10px;
+    text-align: start;
+}
+
+.hotel-item img {
+    width: 100%;
+    /* max-width: 100%; */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.hotel-item h3 {
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+}
+
+.hotel-item p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
